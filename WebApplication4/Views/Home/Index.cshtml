@@ -13,14 +13,23 @@
 <body>
     <div>
         @using (Html.BeginForm("SubmitData", "Home")) {
-            @Html.TextBox("FirstName")<br />
+            @*@Html.TextBox("FirstName")<br />
             @Html.ValidationMessage("FirstName")<br />
             @Html.TextBox("LastName")<br />
             @Html.ValidationMessage("LastName")<br />
             @Html.TextBox("Email")<br />
             @Html.ValidationMessage("Email")<br />
             @Html.TextBox("Age")<br />
-            @Html.ValidationMessage("Age")<br />
+            @Html.ValidationMessage("Age")<br />*@
+            @Html.TextBoxFor(x => x.FirstName)<br />
+            @Html.ValidationMessageFor(x => x.FirstName)<br />
+            @Html.TextBoxFor(x => x.LastName)<br />
+            @Html.ValidationMessageFor(x => x.LastName)<br />
+            @Html.TextBoxFor(x => x.Email)<br />
+            @Html.ValidationMessageFor(x => x.Email)<br />
+            @Html.TextBoxFor(x => x.Age)<br />
+            @Html.ValidationMessageFor(x => x.Age)<br />
+
             <input type="submit" value="Click me" />
         }
     </div>
